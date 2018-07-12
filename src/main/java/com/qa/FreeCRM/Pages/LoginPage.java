@@ -130,6 +130,9 @@ public class LoginPage extends TestBaseParent
 		
 	}
 	
-	
+	public void VerifyLoginFunctionality()
+	{
+		System.out.println("Verify Login Functionality");
+	}
 	
 }
