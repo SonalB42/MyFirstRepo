@@ -3,13 +3,11 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.FreeCRM.TestCases.HomePageTest">
+      <class name="com.qa.FreeCRM.Utilities.TestUtil">
         <methods>
-          <include name="TearDown"/>
-          <include name="setupHomePage"/>
-          <include name="VerifyHomePageUserName"/>
+          <include name="SwithToWindow"/>
         </methods>
-      </class> <!-- com.qa.FreeCRM.TestCases.HomePageTest -->
+      </class> <!-- com.qa.FreeCRM.Utilities.TestUtil -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -3,6 +3,7 @@ package com.qa.FreeCRM.TestBase;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.rmi.UnknownHostException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
