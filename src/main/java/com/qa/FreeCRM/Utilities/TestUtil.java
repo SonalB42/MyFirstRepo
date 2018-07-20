@@ -8,8 +8,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotVisibleException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.gargoylesoftware.htmlunit.javascript.host.Set;
@@ -77,9 +83,58 @@ public class TestUtil extends TestBaseParent
 			
 	}
 	
-
+	public void DragAndDropMethod()
+	{
+		Actions action1=new Actions(Driver);
+		action1.dragAndDrop(Driver.findElement(By.xpath(prop.getProperty("Drag_SrcElement_xpath"))), Driver.findElement(By.xpath(prop.getProperty("Drag_DestElement_xpath")))).build().perform();
+			
+	}
+	public void RightClickMethod()
+	{
+		Actions action2=new Actions(Driver);
+		action2.contextClick().perform();
+	}
+	
+	public void DoubleClickMethod()
+	{
+		Actions action3=new Actions(Driver);
+		action3.doubleClick().perform();
+	}
+	
+	public void MouseMovementElementMethod()
+	{
+		Actions action4=new Actions(Driver);
+		action4.moveToElement(Driver.findElement(By.xpath(prop.getProperty("MoveToElement_xpath")))).build().perform();
+	
+	}
+		
+	public void alertAccept()
+	{
+		Alert alertAcc=Driver.switchTo().alert();
+		alertAcc.accept();
+	}
+	
+	public void alertCancel()
+	{
+		Alert alertCan=Driver.switchTo().alert();
+		alertCan.dismiss();
+	}
+	
+	public void alertGetText()
+	{
+		Alert alertText=Driver.switchTo().alert();
+		alertText.getText();
+		
+	}
+	
+	public void alertSendText()
+	{
+		Alert alertSendText=Driver.switchTo().alert();
+		alertSendText.sendKeys(prop.getProperty("AlertTextEnter"));
+	}
 	
 	
-	
+		
 	
 }
+	

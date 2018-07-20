@@ -76,5 +76,11 @@ public class JavaScriptFunctions
 		js.executeScript("alert('"+message+"')");
 	}
 	
+	public static void DatePickThroughJs(WebDriver Driver, WebElement element, String DateVal)
+	{
+		JavascriptExecutor js=((JavascriptExecutor)Driver);
+		js.executeScript("arguments[0].setAttribute('value','"+DateVal+"');", element);
+		
+	}
 	
 }

@@ -73,10 +73,11 @@ public class HomePageTest extends TestBaseParent
 				e.printStackTrace();
 			}
 		}
-		
+				
 		@AfterMethod
 		public void TearDown()
 		{
+						
 			Driver.quit();
 		}
 		

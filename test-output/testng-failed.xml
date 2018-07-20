@@ -3,11 +3,12 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.FreeCRM.Utilities.TestUtil">
+      <class name="com.qa.FreeCRM.TestCases.ContactsPageTest">
         <methods>
-          <include name="SwithToWindow"/>
+          <include name="setupContactPage"/>
+          <include name="VerifyContactPageTitleTest"/>
         </methods>
-      </class> <!-- com.qa.FreeCRM.Utilities.TestUtil -->
+      </class> <!-- com.qa.FreeCRM.TestCases.ContactsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
