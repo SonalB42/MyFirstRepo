@@ -1,12 +1,17 @@
 package com.qa.FreeCRM.Pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import com.qa.FreeCRM.TestBase.TestBaseParent;
+import com.qa.FreeCRM.Utilities.ReadDataFromExcel;
 
 public class ContactsPage extends TestBaseParent
 {
@@ -66,30 +71,6 @@ public class ContactsPage extends TestBaseParent
 	{
 		return Driver.getTitle();
 	}
-	
-	public void ValidateContactInformation()
-	{
-		Select TitleDrp=new Select(NewContacts_TitleDrpBtn);
-		TitleDrp.selectByVisibleText("Mrs.");
-		NewContacts_FnameTextBox.sendKeys("Reeta");
-		NewContacts_LnameTextBox.sendKeys("Nikhar");
-		NewContacts_Position_TextBox.sendKeys("Accountant");
-		NewContacts_Mobile_TextBox.sendKeys("8982394181");
-		NewContacts_email_TextBox.sendKeys("ReetaNikhar@gmail.com");
-		NewContacts_Save_Btn.click();
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

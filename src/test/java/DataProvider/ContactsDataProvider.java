@@ -1,10 +1,11 @@
-package com.qa.FreeCRM.TestCases;
+package DataProvider;
 
 import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,7 +17,7 @@ import com.qa.FreeCRM.TestBase.TestBaseParent;
 import com.qa.FreeCRM.Utilities.ReadDataFromExcel;
 import com.qa.FreeCRM.Utilities.TestUtil;
 
-public class ContactsPageTest extends TestBaseParent
+public class ContactsDataProvider extends TestBaseParent
 {
 
 	LoginPage loginPage;
@@ -24,7 +25,7 @@ public class ContactsPageTest extends TestBaseParent
 	ContactsPage contactPage;
 	TestUtil testUtil;
 	
-	public ContactsPageTest()
+	public ContactsDataProvider()
 	{
 		super();
 	}
@@ -71,5 +72,11 @@ public class ContactsPageTest extends TestBaseParent
 		Driver.findElement(By.xpath("//input[@id='email']")).sendKeys(email);
 		Driver.findElement(By.xpath("//form[@name='contactForm']//input[@type='submit' and @value='Save']")).click();
 	}
-		
+
+	@AfterMethod
+	public void TearDown()
+	{
+		Driver.quit();
+	}
+	
 }
