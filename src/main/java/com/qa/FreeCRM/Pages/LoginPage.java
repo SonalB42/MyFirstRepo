@@ -84,15 +84,6 @@ public class LoginPage extends TestBaseParent
 		
 	}
 	
-	public HomePage ValidateLogin(String uname,String Pass)
-	{
-		Username.sendKeys(uname);
-		Password.sendKeys(Pass);
-		JavaScriptFunctions.ClickByJS(Driver, LoginBtn);
-		//LoginBtn.click();
-		return new HomePage();
-		
-	}
 	
 	public boolean VerifyFeatureLinkBtn()
 	{
@@ -135,4 +126,10 @@ public class LoginPage extends TestBaseParent
 		System.out.println("Verify Login Functionality");
 	}
 	
+	public HomePage ValidateLogin(String uname,String Pass)
+	{
+		Username.sendKeys(uname);
+		Password.sendKeys(Pass);
+		return new HomePage();
+	}
 }

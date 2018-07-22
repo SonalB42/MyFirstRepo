@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="DataProvider.ContactsDataProvider">
+      <class name="com.qa.FreeCRM.TestCases.LoginPageTest">
         <methods>
-          <include name="setupContactPage"/>
-          <include name="ValidateContactInformationTest"/>
-          <include name="TearDown"/>
+          <include name="VerifyLoginMultipleTestData"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- DataProvider.ContactsDataProvider -->
+      </class> <!-- com.qa.FreeCRM.TestCases.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
